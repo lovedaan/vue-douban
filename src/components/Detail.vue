@@ -42,7 +42,6 @@
             }
         },
         mounted(){
-            console.log(this.detailDataJson.images.large);
             var path = this.$route.path;
             this.fetchData(path); 
         },

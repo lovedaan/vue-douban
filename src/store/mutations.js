@@ -2,7 +2,7 @@
  * @Author: Marte
  * @Date:   2017-02-28 21:49:56
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-03-01 09:40:00
+ * @Last Modified time: 2017-03-02 10:08:19
  */
 
 'use strict';
@@ -10,7 +10,7 @@
 import getters from './getters.js'
 
 const state = {
-    isShowLoading: true,
+    isShowLoading: false,
     isShowBackBtn: false
 }
 

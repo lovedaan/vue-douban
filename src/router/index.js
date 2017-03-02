@@ -8,6 +8,7 @@ import Detail from '@/components/Detail'
 import Search from '@/components/Search'
 import searchList from '@/components/searchList'
 import My from '@/components/My'
+import BootLayer from '@/components/BootLayer'
 
 Vue.use(Router)
 
@@ -48,7 +49,10 @@ export default new Router({
         path: '/subject/:id',
         component: Detail
     }, {
+        path: '/bootLayer',
+        component: BootLayer
+    }, {
         path: '*',
-        redirect: '/home'
+        redirect: '/bootLayer'
     }]
 })

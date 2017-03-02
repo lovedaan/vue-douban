@@ -76,6 +76,7 @@ export default {
                 
                 this.$store.dispatch('showBackBtn');
             }
+
         }
     }
 }

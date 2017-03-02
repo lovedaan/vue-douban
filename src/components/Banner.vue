@@ -13,36 +13,15 @@
         data (){
             return {
                 bannerData : [],
-                lock:true
             }
         },
         mounted(){
-            if(!this.lock){return;}
             this.fetchData();
         },
         methods : {
             fetchData (){
-                var _this = this;
-                this.bannerData = [];
-                this.$jsonp({
-                    'url' :'https://api.douban.com/v2/movie/in_theaters',
-                    'cbName' : 'callback',
-                    'data' : {
-                        'start' : 0,
-                        'count' : 3
-                    },
-                    'showLoading' : function () {
-                        _this.$store.dispatch('showLoading');
-                    },
-                    'hideLoading' : function (){
-                        _this.$store.dispatch('hideLoading');
-                    },
-                    'success' : function (res) {
-                        //console.log(res);
-                        _this.bannerData = res.subjects;
-                        _this.lock = false;
-                    }
-                });
+                var data = window.sessionStorage.getItem('bannerdata');
+                this.bannerData = JSON.parse(data);
             }
         }
     }
