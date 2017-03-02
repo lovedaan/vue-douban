@@ -1,0 +1,96 @@
+/*===================  reset.css重置样式  ======================*/
+*,
+::after,
+::before{
+
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color:transparent;
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: "Microsoft YaHei" , "sans-serif";
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    position: relative;
+    background: #f5f5f5;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+#footer .mint-tabbar{
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+/*输入法 遮住*/
+input,textarea{
+    /*去除文本框的默认样式*/
+    -webkit-appearance:none;
+    resize: none;
+	border:none;
+    outline: none;
+	 -webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+em,i{ font-style: normal;}
+strong{ font-weight: normal;}
+a{
+    text-decoration:none;
+    color:#969696;
+}
+a:hover{
+    text-decoration:none;
+    color:#969696;
+}
+img{
+    /*a标签包住图片点击有蓝色边框和3像素间隙*/
+    border:0;
+    vertical-align: middle;
+}
+table{
+    /*细线表格*/
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ul,ol{
+    list-style: none;
+}
+
+/*===================  common.css公共样式  ======================*/
+
+/*清除浮动*/
+.clearfix::before,.clearfix::after{
+    content: ""; 
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height:0;
+    line-height:0;
+}
+
+ /*文本换行*/
+ .wordwrap{
+    word-break: break-all;
+    word-wrap: break-word;
+ }    
+ /*单行溢出出现省略号*/
+ .omg{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+ }
+
+ .f_left{
+     float: left;
+ }
+.f_right{
+    float: right;
+}
+
+
+
