@@ -3,7 +3,7 @@
         <div class="list">
             <h2>{{topTitle}}</h2>
             <ul class="listItem">
-                <router-link v-for="(item,index) in searchListData" tag="li" :to="'/subject/'+item.id">
+                <router-link v-for="(item,index) in searchListData" :key="item.id" tag="li" :to="'/subject/'+item.id">
                     <a href="#">
                         <div class="leftItem">
                             <img :src="item.images.small" alt="" />

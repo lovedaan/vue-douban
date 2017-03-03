@@ -2,7 +2,7 @@
     <div id="bootLayer">
         <div class="layer">
             <mt-swipe :auto="4000" :continuous="false">
-                  <mt-swipe-item v-for="(item,index) in layerData">
+                  <mt-swipe-item v-for="(item,index) in layerData" :key="item.id">
                       <img :src="item.images.large" alt="">
                       <router-link v-show="index == (layerData.length - 1)" to='/home' class="goHomeBtn">点击查看</router-link>
                   </mt-swipe-item>
@@ -74,16 +74,17 @@
     .goHomeBtn{
         position: absolute;
         left: 50%;
-        bottom: 60px;
+        bottom: 100px;
         -webkit-transform:translateX(-50%);
         transform:translateX(-50%);
-        width: 120px;
-        height: 40px;
+        width: 200px;
         line-height: 40px;
-        text-align: center;
-        background-color: yellowgreen;
-        color:#fff;
-        font-size:20px;
+        text-align: center;    
+        background-color: rgba(53,73,94,.4);
+        border: 3px solid #35495e;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 24px;
         border-radius: 8px;
     }
 </style>

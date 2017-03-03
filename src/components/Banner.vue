@@ -1,7 +1,7 @@
 <template>
     <div id="banner" class="page-swipe">
         <mt-swipe :auto="4000">
-              <mt-swipe-item v-for="(item,index) in bannerData">
+              <mt-swipe-item v-for="(item,index) in bannerData" :key="item.id">
                     <img :src="item.images.large" alt="">
               </mt-swipe-item>
         </mt-swipe>
