@@ -6,7 +6,6 @@ var vueLoaderConfig = require('./vue-loader.conf')
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
-
 module.exports = {
   entry: {
     app: './src/main.js'
@@ -41,14 +40,14 @@ module.exports = {
       loader: 'url-loader',
       query: {
         limit: 10000,
-        name: utils.assetsPath('img/[name].[ext]')
+        name: 'assets/images/[name].[ext]'
       }
     }, {
       test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
       loader: 'url-loader',
       query: {
         limit: 10000,
-        name: utils.assetsPath('fonts/[name].[ext]')
+        name: 'assets/fonts/[name].[ext]'
       }
     }]
   }

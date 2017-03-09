@@ -13,7 +13,7 @@ import BootLayer from '@/components/BootLayer'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
+    /*mode: 'history',
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
             return savedPosition
@@ -23,7 +23,7 @@ export default new Router({
                 y: 0
             }
         }
-    },
+    },*/
     routes: [{
         path: '/home',
         component: Home

@@ -8,7 +8,9 @@
                 </router-link>
             </mt-header>
         </header>
-        <router-view></router-view>
+        <transition enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutRight">
+            <router-view></router-view>
+        </transition>
         <FooterView></FooterView>
     </div>
 </template>
